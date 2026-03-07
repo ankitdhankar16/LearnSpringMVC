@@ -1,5 +1,6 @@
 package com.dhankar.LearnSpringMVC.controller;
 
+import com.dhankar.LearnSpringMVC.dto.EmployeeDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,6 +15,11 @@ public class EmployeeController {
     @GetMapping("/{id}")
     public String getEmployeeById(@PathVariable Long id){
         return "Employee id is "+ id;
+    }
+    @PostMapping
+    public EmployeeDTO createEmployee(@RequestBody EmployeeDTO inputEmployee){
+        inputEmployee.setId(10000L);
+        return inputEmployee;
     }
 
 }

@@ -34,7 +34,7 @@ public class EmployeeDTO {
         return isActive;
     }
 
-    public void setActive(Boolean active) {
-        isActive = active;
+    public void setActive(Boolean isActive) {
+        this.isActive = isActive;
     }
 }
